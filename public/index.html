@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/codemirror.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Code Editor</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="c-5 editor-content">
+            <div class="code html-code" id="html-code">
+                <div class="header">
+                    <span>
+                        html
+                    </span>
+                </div>
+                <div class="body">
+                    <textarea id="html"></textarea>
+                </div>
+            </div>
+            <div class="code css-code" id="css-code">
+                <div class="header">css</div>
+                <div class="body">
+                    <textarea id="css"></textarea>
+                </div>
+            </div>
+            <div class="code js-code" id="js-code">
+                <div class="header">
+                    <span>js</span>
+                </div>
+                <div class="body">
+                    <textarea id="js"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="c-5 result-content">
+            <iframe id="iframe"></iframe>
+        </div>
+    </div>
+
+    </textarea>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/codemirror.js"></script>
+    <script src="../assets/js/xml.js"></script>
+    <script src="../assets/js/css.js"></script>
+    <script src="../assets/js/javascript.js"></script>
+    <script src="../assets/js/htmlmixed.js"></script>
+    <script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+    <script src="../assets/js/emmet.js"></script>
+    <script src="../assets/js/codeEditor.js"></script>
+</body>
+
+</html>
