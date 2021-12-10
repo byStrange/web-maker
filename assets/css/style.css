@@ -41,6 +41,24 @@
   padding: 5px;
   font-family: Gilroy, monospace, Verdana, Geneva, Tahoma, sans-serif;
   background: rgba(200, 200, 200, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .editor-content .header button {
+  border: none;
+  background: #0072c0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .container .result-content iframe {

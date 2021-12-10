@@ -34,7 +34,9 @@ function res() {
     html = htmleditor.getValue();
     css = `<style>${csseditor.getValue()}</style>`
     js = '<scri' + 'pt>' + jseditor.getValue() + '</scri' + 'pt>'
+    t.write('')
     t.write(html + css + js)
+    console.log(html, css, js)
 }
 const htmlCode = document.querySelector('#html-code')
 htmlCode.onclick = function () {
