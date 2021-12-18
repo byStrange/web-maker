@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .container {
@@ -9,22 +10,30 @@
     height: 100vh;
     background: rgba(0, 0, 0, .3);
     display: flex;
+    flex-direction: column;
 
     .c-5 {
-        width: 50%;
-        height: 100%;
-        border: 1px solid #000;
+        width: 100%;
+        height: 50%;
     }
 
     .editor-content {
+        width: 100%;
+        height: 50%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
         .code {
             width: 100%;
-            height: 33.33%;
-            border: 1px solid #000;
-            background: rgb(52, 61, 70);
+            height: 100%;
+            background: #0C1021;
+
+            border: 1px solid grey;
+
+            .body {
+                width: 100%;
+                height: 100%
+            }
         }
 
         .header {
@@ -35,11 +44,15 @@
             align-items: center;
             justify-content: space-between;
 
+            span {
+                text-transform: uppercase;
+            }
+
             button {
+                display: inline-block;
                 border: none;
                 background: rgb(0, 114, 192);
                 color: white;
-                padding: 5px 10px;
                 border-radius: 5px;
                 cursor: pointer;
             }
@@ -54,10 +67,10 @@
     }
 }
 
-.CodeMirror.cm-s-default.CodeMirror-wrap {
+.CodeMirror.cm-s-blackboard.CodeMirror-wrap {
     width: 100%;
-    height: 100%;
-    background: #79C0FF;
+    height: 90%;
+    background: #0C1021;
 }
 
 .CodeMirror.cm-s-default {
@@ -165,4 +178,20 @@
 
 .cm-m-css.cm-atom {
     color: #C695C0 !important;
+}
+
+.cm-s-blackboard.CodeMirror {
+    background: #0C1021;
+    color: #F8F8F8;
+}
+
+.cm-s-blackboard .CodeMirror-matchingbracket {
+    outline: 1px solid grey;
+    color: white !important;
+}
+
+
+.cm-s-blackboard .cm-error {
+    background: #9D1E15;
+    color: #F8F8F8;
 }

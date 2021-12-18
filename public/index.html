@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/css/codemirror.css">
+
     <link rel="stylesheet" href="../assets/css/style.css">
+
 
     <title>Code Editor</title>
 </head>
@@ -16,32 +18,34 @@
 
     <div class="container">
         <div class="c-5 editor-content">
-            <div class="code html-code" id="html-code">
+            <div class="code html-code" id="htmlCode">
                 <div class="header">
                     <span>
                         html
                     </span>
-                    <button onclick="res()">Run</button>
+                    <button onclick="res()" title="or (ctrl + enter)">Run</button>
                 </div>
                 <div class="body">
                     <textarea id="html"></textarea>
                 </div>
             </div>
-            <div class="code css-code" id="css-code">
-                <div class="header">css</div>
+            <div class="code css-code" id="cssCode">
+                <div class="header"><span>css</span></div>
                 <div class="body">
                     <textarea id="css"></textarea>
                 </div>
             </div>
-            <div class="code js-code" id="js-code">
+            <div class="code js-code" id="jsCode">
                 <div class="header">
                     <span>js</span>
                 </div>
                 <div class="body">
-                    <textarea id="js"></textarea>
+                    <textarea
+                        id="js">// please do not use let or var to create varible just start with their names it also work</textarea>
                 </div>
             </div>
         </div>
+        <!-- <div class="sizer" style="width:8px;height: 100%;cursor:e-resize;z-index: 555555555;" id="resizer"></div> -->
         <div class="c-5 result-content">
             <iframe id="iframe" style="border: none;background: #fff;"></iframe>
         </div>
