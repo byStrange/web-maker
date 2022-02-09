@@ -59,7 +59,29 @@ window.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.keyCode == 13) {
         res()
     }
+    
+    window.localStorage.setItem('jsCode', jsEditor.getValue())
+    window.localStorage.setItem('cssCode', cssEditor.getValue())
+    window.localStorage.setItem('htmlCode', htmlEditor.getValue())
 })
+
+function loadOldCode() {
+    jsEditor.setValue(localStorage.getItem("jsCode"))
+    
+    cssEditor.setValue(localStorage.getItem("cssCode"))
+    
+    htmlEditor.setValue(localStorage.getItem("htmlCode"))
+}
+
+window.onload = function () {
+    if (confirm('Do you want load your old code')) {
+        loadOldCode()
+    }
+}
+window.onbeforeunload = function(){
+  return 'Are you sure you want to leave?';
+};
+
 // const resizer = document.getElementById('resizer');
 // const editorCone = document.querySelector('.editor-content')
 // resizer.onmousedown = function (e) {

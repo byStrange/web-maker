@@ -68,11 +68,14 @@
 
 .container .editor-content .header span {
   text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
 .container .editor-content .header button {
   display: inline-block;
   border: none;
+  padding: 4px 7px;
   background: #0072c0;
   color: white;
   border-radius: 5px;
