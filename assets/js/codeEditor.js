@@ -74,8 +74,10 @@ function loadOldCode() {
 }
 
 window.onload = function () {
-    if (confirm('Do you want load your old code')) {
-        loadOldCode()
+    if(localStorage.getItem("jsCode") || localStorage.getItem('cssCode') || localStorage.getItem('htmlCode')) {
+        if (confirm('Do you want load your old code')) {
+            loadOldCode()
+        }
     }
 }
 window.onbeforeunload = function(){
